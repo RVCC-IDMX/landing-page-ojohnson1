@@ -1,2 +1,56 @@
 /* _nav.scss */
 @use "../abstracts/variables" as *;
+
+.nav{
+    font-weight: 700;
+    border-bottom: 1px solid black;
+
+
+    &__toggle
+    {
+        position: absolute;
+        cursor: pointer;
+        margin: 0rem 1rem;
+        right: 0;
+
+    }
+
+
+    svg{
+        width: 1.5rem;}
+        
+        &__menu{
+            margin-top: 0.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            margin:1rem
+        }
+
+        li{
+            list-style: none;
+            display: none;
+
+          
+        a{
+            text-decoration: none;
+            color: inherit;
+            font-size:1.2rem;
+        }
+    }
+     
+         #nav__checkbox:checked ~ ul.nav__menu li{
+             display: block;
+         }
+
+         &__logo{
+            margin-right: auto;
+            display: block;
+        }
+    
+}
+
+
+
+
