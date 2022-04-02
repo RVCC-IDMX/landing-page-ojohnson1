@@ -1,2 +1,36 @@
 /* _hero.scss */
 @use "../abstracts/variables" as *;
+
+.hero{text-align: left;
+
+    &__title{
+   font-family: Oswald;
+   font-size: 28px;
+   
+   line-height: 47px;
+max-width: 100%;
+vertical-align: top;}
+
+&__subtitle{ font-size: 24px;
+
+}
+
+&__description{
+    font-family: "Roboto";
+    font-size: 21px;
+    line-height: 36px;
+    vertical-align: top;
+
+&__image{
+    text-align: center;
+    width: 300px;
+    max-width: 100%;
+    position: absolute;
+}
+}
+
+}
+    
+
+
+
