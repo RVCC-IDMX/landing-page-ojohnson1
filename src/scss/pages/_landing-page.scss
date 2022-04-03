@@ -1,1 +1,28 @@
 @use "../abstracts/variables" as *;
+
+main {
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+}
+
+body {
+  background-image: linear-gradient(#af3edf, #c427c1);
+}
+
+.cta {
+  top: 70px;
+  margin: 0 auto;
+  size: 36px;
+
+  &__btn {
+    background-color: #2b2f47;
+    color: white;
+    border-radius: 40;
+    box-shadow: lightgray;
+    font-family: "Oswald";
+    font-size: 24px;
+    width: 269px;
+    height: 50.9px;
+  }
+}
