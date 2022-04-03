@@ -1,56 +1,84 @@
 /* _nav.scss */
 @use "../abstracts/variables" as *;
 
-.nav{
-    font-weight: 700;
-    border-bottom: 1px solid black;
+.nav {
+  font-family: "Roboto";
 
+  font-weight: 700;
+  max-width: 45rem;
+  padding-inline: 2rem;
+  margin-inline: auto;
+  color: white;
 
-    &__toggle
-    {
-        position: absolute;
-        cursor: pointer;
-        margin: 0rem 1rem;
-        right: 0;
+  &__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    right: 0;
+  }
 
+  svg {
+    width: 1.5rem;
+  }
+
+  &__menu {
+    margin-top: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  li {
+    list-style: none;
+    display: none;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.2rem;
     }
+  }
 
+  &__logo {
+    margin-right: auto;
+    display: block;
+  }
 
-    svg{
-        width: 1.5rem;}
-        
-        &__menu{
-            margin-top: 0.2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            align-items: center;
-            margin:1rem
-        }
-
-        li{
-            list-style: none;
-            display: none;
-
-          
-        a{
-            text-decoration: none;
-            color: inherit;
-            font-size:1.2rem;
-        }
-    }
-     
-         #nav__checkbox:checked ~ ul.nav__menu li{
-             display: block;
-         }
-
-         &__logo{
-            margin-right: auto;
-            display: block;
-        }
-    
+  #nav__checkbox:checked ~ ul.nav__menu li {
+    display: block;
+  }
 }
 
+#nav__checkbox:checked ~ label .nav__toggle .close {
+  display: block;
+}
 
+#nav__checkbox:checked ~ label .nav__toggle .menu {
+  display: none;
+}
 
+#nav__checkbox ~ label .nav__toggle .close {
+  display: none;
+}
 
+#nav__checkbox ~ label .nav__toggle .menu {
+  display: block;
+}
+
+@media only screen and (min-width: 560px) {
+  .nav {
+    &__toggle {
+      display: none;
+    }
+
+    &__menu {
+      flex-direction: row;
+    }
+
+    li {
+      display: block;
+    }
+  }
+}
